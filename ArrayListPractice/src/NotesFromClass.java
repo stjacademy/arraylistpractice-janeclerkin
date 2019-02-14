@@ -25,6 +25,7 @@ public class NotesFromClass {
 		}
 		
 		//for every number in the list (instead of counter, its the actual number)
+		// dont remove - it throws an error
 		for (Integer num : myList)
 		{
 			System.out.print(num + " ");
