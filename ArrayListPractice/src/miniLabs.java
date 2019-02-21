@@ -4,10 +4,13 @@ import java.lang.*;
 
 public class miniLabs {
 
-	public static ArrayList<Integer> main(String[] args) {
+	public static void main(String[] args) {
 		
+		
+		
+		System.out.println(factors(72));
 		//sample data given in instructions
-	/*	ArrayList<Integer> comp = new ArrayList<Integer>();
+		ArrayList<Integer> comp = new ArrayList<Integer>();
 		comp.add(2);
 		comp.add(6);
 		comp.add(8);
@@ -18,11 +21,8 @@ public class miniLabs {
 		comp.add(15);
 		comp.add(17);
 		
-		return(composite(comp));
-		*/
+		System.out.println(composite(comp));
 		
-		factors(72);
-
 	}
 
 
@@ -38,19 +38,18 @@ public static ArrayList<Integer> factors(int number) {
 			nums.add(i);
 	}
 	
-	System.out.println("factors: " + nums);
+	
 	return nums;
 	
 }
 
  private static ArrayList<Integer> composite(ArrayList<Integer> comp) {
 	
-	//ArrayList<Integer> comp = new ArrayList<Integer>();
 	
 	for (int i = 0; i<comp.size();i++)
 	{
 		for (int j = 2; j< Math.sqrt(i); j++)
-			if (j%1 != 0)
+			if (comp.get(i)%j!= 0)
 			{
 				comp.remove(i);
 				i--;
